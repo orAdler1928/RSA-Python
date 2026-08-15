@@ -25,6 +25,7 @@ def rsa_key_pair():
     priv = PrivateKey(n=3233, d=2753)
     return pub, priv
 
+
 @pytest.fixture
 def large_rsa_key_pair():
     """
@@ -40,6 +41,8 @@ def large_rsa_key_pair():
     d = pow(e, -1, phi)
 
     return PublicKey(n=n, e=e), PrivateKey(n=n, d=d)
+
+
 # --- טסטים עבור הצפנה (PublicKey) ---
 
 
